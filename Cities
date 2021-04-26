@@ -1,0 +1,28 @@
+grid = [(i, j) for j in range(101) for i in range(101)]
+x = []
+y = []
+best = []
+average = []
+mutationindex = 0.1
+rand =np.random.randint(0,10000,50)
+sample = []
+for i in rand:
+  sample.append(grid[i])
+flag = 0
+for i in range(50):
+  for j in range(50):
+    if(rand[i]==rand[j] and i!=j):
+      flag = 1 
+      break
+x = []
+y = []
+for i in sample:
+  x.append(i[0])
+  y.append(i[1])
+ 
+ 
+plt.figure(figsize=(4,4))
+plt.scatter(x,y) 
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.title("coordinates")
