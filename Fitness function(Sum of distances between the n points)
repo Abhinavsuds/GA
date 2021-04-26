@@ -1,0 +1,18 @@
+def fitness(pop):
+ dist = []
+ s = []
+ count = 0
+ for m in range(len(pop)):
+   sum1 = 0
+   dist1 = []
+   for n in range(len(pop[m])-1):
+      d  = ((x[pop[m][n]]-x[pop[m][n+1]])**2 + (y[pop[m][n]]-y[pop[m][n+1]])**2)**0.5
+      dist1.append(d)
+      sum1 += d
+   sum1 += ((x[pop[m][n]]-x[pop[m][0]])**2 + (y[pop[m][n]]-y[pop[m][0]])**2)**0.5
+   s.append(sum1)
+   dist.append(dist1)
+
+ s = np.array(s)
+ dist = np.array(dist)
+ return s
