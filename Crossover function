@@ -1,0 +1,9 @@
+def crossover(parent1, parent2):
+  child = []
+  crossoverpointx = np.random.randint(0,50,1)
+  crossoverpoint = crossoverpointx[0]  
+  child = [i for i in parent1[:crossoverpoint]]
+  for x in parent2:
+   if x not in parent1[:crossoverpoint]:
+    child.append(x)
+  return child
