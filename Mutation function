@@ -1,0 +1,11 @@
+def mutation(parent):
+  #child = parent
+  m = np.random.rand()
+  if (m < mutationindex):
+    z1 = np.random.randint(2,len(parent)-1,1)
+    z = z1[0]
+    temp = parent[z1]
+    parent[z] = parent[len(parent) - z]
+    parent[len(parent) - z] = temp 
+
+  return parent
